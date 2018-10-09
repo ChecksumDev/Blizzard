@@ -1,6 +1,6 @@
 
 
-const DISCORD_TOKEN = 'NDY1NDE1OTkzNTc3OTYzNTIx.DiNMcg.dbw8xlrDu3dT_Os04oRg36WLyK0'; // get your bot specific Token - https://discordapp.com/developers/applications/me/create
+const DISCORD_TOKEN = 'YOUR-DISCORD-BOT-TOKEN'; // get your bot specific Token - https://discordapp.com/developers/applications/me/create
 
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
