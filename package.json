@@ -1,0 +1,17 @@
+{
+  "name": "thecatapi-discord-commando-bot",
+  "version": "1.0.0",
+  "description": "Example of using TheCatAPI.com & TheDogAPI.com with Discord Commando Bot Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aden Forshaw",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "discord.js-commando": "^0.10.0",
+    "query-string": "^6.1.0",
+    "r2": "^2.0.1"
+  }
+}
