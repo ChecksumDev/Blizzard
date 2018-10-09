@@ -36,3 +36,9 @@ Then run the app!
 ```
 node index.js
 ```
+You should now see your Bot alive in Discord
+
+Chat to it with either 'cmd cat' or 'cmd dog'
+
+![](https://github.com/AdenForshaw/theCatAPI-discord-commando-bot/raw/master/static/discord-screenshot.png)
+
