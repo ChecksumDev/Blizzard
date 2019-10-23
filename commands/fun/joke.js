@@ -16,10 +16,8 @@ module.exports = class DogCommand extends commando.Command {
     const querystring = require("querystring");
     const query = querystring.stringify();
 
-    const { text } = await fetch(`https://icanhazdadjoke.com/`).then(response =>
-      response.json().then(res => {
-        console.log(res);
-      })
-    );
+    await fetch(`https://icanhazdadjoke.com/`).then(response => {
+      message.reply(response);
+    });
   }
 };

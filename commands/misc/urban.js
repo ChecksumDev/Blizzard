@@ -9,14 +9,7 @@ module.exports = class UrbanCommand extends commando.Command {
       name: "urban",
       group: "misc",
       memberName: "urban",
-      description: "Looks up a word or phrase in the urban dictionary",
-      args: [
-        {
-          key: "text",
-          prompt: "What would you like to look up in the urban dictionary?",
-          type: "string"
-        }
-      ]
+      description: "Looks up a word or phrase in the urban dictionary"
     });
   }
 
