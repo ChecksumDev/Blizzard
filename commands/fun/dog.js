@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 const querystring = require("query-string");
 const r2 = require("r2");
 const DOG_API_URL = "https://api.thedogapi.com/";
-const DOG_API_KEY = process.env.DOG_API_KEY; // get one free from TheDogAPI.com
+const DOG_API_KEY = process.env.DOG_API_KEY;
 
 module.exports = class DogCommand extends commando.Command {
   constructor(client) {
