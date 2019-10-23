@@ -8,6 +8,11 @@ const client = new CommandoClient({
   disableEveryone: false
 });
 
+client.on("message", (message) => {
+
+  // Message Logging
+  console.log(message.author.tag | message.content)})
+
 client.registry
   .registerDefaultTypes()
   .registerGroups([["fun", "Fun Commands"], ["moderation", "Moderation Commands"], ["special", "Special Commands"]])
