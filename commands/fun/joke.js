@@ -5,10 +5,10 @@ const Discord = require("discord.js");
 module.exports = class DogCommand extends commando.Command {
   constructor(client) {
     super(client, {
-      name: "dog",
+      name: "joke",
       group: "fun",
-      memberName: "dog",
-      description: "Woof."
+      memberName: "joke",
+      description: "Gives you a funny dad joke"
     });
   }
 
