@@ -16,5 +16,6 @@ module.exports = class PurgeCommand extends Command {
 		let messagecount = parseInt(args[0]);
       message.channel.fetchMessages({ limit: messagecount })
   .then(messages => message.channel.bulkDelete(messages));
+		message.reply("Deleted " + messagecount + "Messages. 👍")
 	}
 };
