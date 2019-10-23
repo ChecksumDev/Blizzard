@@ -1,3 +1,4 @@
+require('dotenv').config();
 const commando = require('discord.js-commando');
 const Discord = require('discord.js');
 const querystring = require('query-string');
@@ -22,9 +23,12 @@ module.exports = class DogCommand extends commando.Command {
             var image = images[0];
             var breed = image.breeds[0];
         
-            console.log('message processed','showing',breed)
-            message.channel.send({files: [ image.url ] } );
-        
+            let embed = new Discord.RichEmbed()
+            .setTitle("A picture of a puppy!")
+            .setImage(`${image.url}`)
+            .setColor("GREEN")
+            .setFooter("Powered by TheDogAPI.com");
+            message.channel.send(embed);        
           }catch(error)
           {
             console.log(error)
