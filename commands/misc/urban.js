@@ -14,12 +14,9 @@ module.exports = class UrbanCommand extends commando.Command {
   }
 
   async run(message, args) {
-    // Temporary commit please ignore
+    if (!args) return message.reply("Please specify your search");
     const trim = (str, max) =>
       str.length > max ? `${str.slice(0, max - 3)}...` : str;
-    if (!args.length) {
-      return message.channel.send("You need to supply a search term!");
-    }
 
     const query = querystring.stringify({ term: args[0] });
 
