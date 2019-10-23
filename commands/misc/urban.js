@@ -39,10 +39,10 @@ module.exports = class UrbanCommand extends commando.Command {
       .setTitle(answer.word)
       .setURL(answer.permalink)
       .addField("Definition", trim(answer.definition, 1024))
-      .addField("Example", trim(answer.example, 1024))
+      .addField("Examples", trim(answer.example, 1024))
       .addField(
         "Rating",
-        `${answer.thumbs_up} thumbs up. ${answer.thumbs_down} thumbs down.`
+        `${answer.thumbs_up} 👍 | ${answer.thumbs_down} 👎`
       );
 
     message.channel.send(embed);
