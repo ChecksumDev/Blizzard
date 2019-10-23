@@ -20,4 +20,4 @@ module.exports = class KickCommand extends commando.Command {
             // Successmessage
             msg.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
         })
-}
+}}

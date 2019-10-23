@@ -19,4 +19,4 @@ module.exports = class BanCommand extends commando.Command {
             // Successmessage
             msg.channel.send(":wave: " + member.displayName + " has been successfully Banned :point_right: ");
         })
-}
+}}
