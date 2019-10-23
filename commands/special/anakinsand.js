@@ -6,7 +6,7 @@ module.exports = class AnakinSandCommand extends commando.Command {
   constructor(client) {
     super(client, {
       name: "anakinsand",
-      group: "moderation",
+      group: "special",
       memberName: "anakinsand",
       description: "A special command for special people"
     });
