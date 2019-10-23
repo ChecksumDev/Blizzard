@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 const commando = require("discord.js-commando");
 const Discord = require("discord.js");
 const querystring = require("query-string");
@@ -21,10 +21,10 @@ module.exports = class CatCommand extends commando.Command {
       var images = await this.loadImage(message.author.username);
       var image = images[0];
       let embed = new Discord.RichEmbed()
-      .setTitle("A picture of a cute kitty cat!")
-      .setImage(`${image.url}`)
-      .setColor("GREEN")
-      .setFooter("Powered by TheCatAPI.com");
+        .setTitle("A picture of a cute kitty cat!")
+        .setImage(`${image.url}`)
+        .setColor("GREEN")
+        .setFooter("Powered by TheCatAPI.com");
       message.channel.send(embed);
     } catch (error) {
       console.log(error);

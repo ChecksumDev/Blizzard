@@ -24,7 +24,7 @@ module.exports = class DogCommand extends commando.Command {
             var breed = image.breeds[0];
         
             let embed = new Discord.RichEmbed()
-            .setTitle("A picture of a puppy!")
+            .setTitle("A picture of a cute puppy!")
             .setImage(`${image.url}`)
             .setColor("GREEN")
             .setFooter("Powered by TheDogAPI.com");
