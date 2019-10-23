@@ -32,7 +32,7 @@ module.exports = class UrbanCommand extends commando.Command {
 
     const [answer] = list;
 
-    const embed = new Discord.MessageEmbed()
+    const embed = new Discord.RichEmbed()
       .setColor("YELLOW")
       .setTitle(answer.word)
       .setURL(answer.permalink)
