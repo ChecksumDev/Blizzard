@@ -11,7 +11,7 @@ const client = new CommandoClient({
 client.on("message", (message) => {
 
   // Message Logging
-  console.log(message.author.tag | message.content)})
+  console.log(``${message.author.tag} | ${message.content}``)})
 
 client.registry
   .registerDefaultTypes()
