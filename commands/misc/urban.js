@@ -12,11 +12,11 @@ module.exports = class UrbanCommand extends commando.Command {
       description: "Looks up a word or phrase in the urban dictionary",
       args: [
         {
-          key: 'text',
-          prompt: 'What would you like to look up in the urban dictionary?',
-          type: 'string',
-        },
-      ],
+          key: "text",
+          prompt: "What would you like to look up in the urban dictionary?",
+          type: "string"
+        }
+      ]
     });
   }
 
@@ -27,7 +27,7 @@ module.exports = class UrbanCommand extends commando.Command {
       return message.channel.send("You need to supply a search term!");
     }
 
-    const query = querystring.stringify({ term: args.join(" ") });
+    const query = querystring.stringify({ term: args[0] });
 
     const { list } = await fetch(
       `https://api.urbandictionary.com/v0/define?${query}`
@@ -35,7 +35,7 @@ module.exports = class UrbanCommand extends commando.Command {
 
     if (!list.length) {
       return message.channel.send(
-        `No results found for **${args.join(" ")}**.`
+        `No results found for **${args[0]}**.`
       );
     }
 
@@ -47,10 +47,7 @@ module.exports = class UrbanCommand extends commando.Command {
       .setURL(answer.permalink)
       .addField("Definition", trim(answer.definition, 1024))
       .addField("Examples", trim(answer.example, 1024))
-      .addField(
-        "Rating",
-        `${answer.thumbs_up} 👍 | ${answer.thumbs_down} 👎`
-      );
+      .addField("Rating", `${answer.thumbs_up} 👍 | ${answer.thumbs_down} 👎`);
 
     message.channel.send(embed);
   }
