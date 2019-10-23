@@ -21,6 +21,7 @@ module.exports = class UrbanCommand extends commando.Command {
   }
 
   async run(message, args) {
+    // Temporary commit please ignore
     const trim = (str, max) =>
       str.length > max ? `${str.slice(0, max - 3)}...` : str;
     if (!args.length) {
