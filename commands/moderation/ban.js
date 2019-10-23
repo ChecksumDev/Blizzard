@@ -4,7 +4,7 @@ const oneLine = require('common-tags').oneLine;
 module.exports = class BanCommand extends commando.Command {
     constructor(client) {
         super(client, {
-            name: 'BAN',
+            name: 'ban',
             group: 'moderation',
             memberName: 'ban',
             description: 'Just a ban command :)',
