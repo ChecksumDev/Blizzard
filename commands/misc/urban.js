@@ -18,7 +18,7 @@ module.exports = class UrbanCommand extends commando.Command {
     const trim = (str, max) =>
       str.length > max ? `${str.slice(0, max - 3)}...` : str;
 
-    const query = querystring.stringify({ term: args[0] });
+    const query = querystring.stringify({ term: args.join(" ") });
 
     const { list } = await fetch(
       `https://api.urbandictionary.com/v0/define?${query}`
@@ -26,7 +26,7 @@ module.exports = class UrbanCommand extends commando.Command {
 
     if (!list.length) {
       return message.channel.send(
-        `No results found for **${args[0]}**.`
+        `No results found for **${args.join(" ")}**.`
       );
     }
 
