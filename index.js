@@ -5,7 +5,8 @@ const path = require("path");
 const client = new CommandoClient({
   commandPrefix: "b?",
   unknownCommandResponse: false,
-  disableEveryone: false
+  disableEveryone: false,
+  invite: "https://discord.gg/SsT9KT"
 });
 
 client.registry
