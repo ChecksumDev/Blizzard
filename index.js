@@ -34,4 +34,6 @@ client.on("ready", () => {
   client.user.setActivity("Blizzard | Server Moderation");
 });
 
+process.on('unhandledRejection', error => console.error('Uncaught Promise Rejection', error));
+
 client.login();
