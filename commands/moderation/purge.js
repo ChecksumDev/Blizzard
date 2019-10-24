@@ -20,15 +20,18 @@ module.exports = class PurgeCommand extends Command {
   }
 
   run(message, args) {
-	  if (args.purgecount > 100) return message.reply("You can currently only purge up to 100 messages at a time."); 
+    if (args.purgecount > 100)
+      return message.reply(
+        "You can currently only purge up to 100 messages at a time."
+      );
     message.channel
       .fetchMessages({
         limit: args.purgecount
       })
       .then(messages => {
-        message.channel
-          .bulkDelete(messages)
-          .catch(error => console.log(error.stack));
+        message.channel.bulkDelete(messages).then(m => {
+          message.reply(`🗑️ Sucessfully Deleted ${args.purgecount} messages.`);
+        });
       });
   }
 };
