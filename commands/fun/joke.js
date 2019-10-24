@@ -12,14 +12,18 @@ module.exports = class DogCommand extends commando.Command {
     });
   }
 
-  async run(message, args) {
-    const querystring = require("querystring");
-    const query = querystring.stringify();
-
-    const { text } = await fetch(`https://icanhazdadjoke.com/`).then(response =>
-      response.json().then(res => {
-        message.reply(text)
-      })
-    );
+  async run(message) {
+    const getDadJoke = async () => {
+      const dadJoke = await fetch("https://icanhazdadjoke.com/", {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      const dadJokeJSON = await dadJoke.json();
+      if (dadJokeJSON.status === 200) {
+        return dadJokeJSON.joke;
+      }
+    };
+    message.reply(getDadJoke);
   }
 };
