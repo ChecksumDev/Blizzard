@@ -22,6 +22,6 @@ module.exports = class DogCommand extends commando.Command {
     if (dadJokeJSON.status === 200) {
       return dadJokeJSON.joke;
     }
-    message.reply(await dadJoke);
+    message.reply(dadJoke);
   }
 };
