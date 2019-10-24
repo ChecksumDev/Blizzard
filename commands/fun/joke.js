@@ -13,17 +13,15 @@ module.exports = class DogCommand extends commando.Command {
   }
 
   async run(message) {
-    const getDadJoke = async () => {
-      const dadJoke = await fetch("https://icanhazdadjoke.com/", {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      const dadJokeJSON = await dadJoke.json();
-      if (dadJokeJSON.status === 200) {
-        return dadJokeJSON.joke;
+    const dadJoke = await fetch("https://icanhazdadjoke.com/", {
+      headers: {
+        Accept: "application/json"
       }
-    };
-    message.reply(getDadJoke);
+    });
+    const dadJokeJSON = await dadJoke.json();
+    if (dadJokeJSON.status === 200) {
+      return dadJokeJSON.joke;
+    }
+    message.reply(await dadJoke);
   }
 };
