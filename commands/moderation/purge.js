@@ -30,7 +30,9 @@ module.exports = class PurgeCommand extends Command {
       })
       .then(messages => {
         message.channel.bulkDelete(messages).then(m => {
-          message.reply(`🗑️ Sucessfully Deleted ${args.purgecount} messages.`);
+          message.reply(`🗑️ Sucessfully Deleted ${args.purgecount} messages.`).then(e => {
+			  message.delete(5000)
+		  })
         });
       });
   }
