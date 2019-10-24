@@ -1,6 +1,6 @@
 require("dotenv").config();
 const commando = require("discord.js-commando");
-const DadJokes = require('dadjokes-wrapper');
+const DadJokes = require("dadjokes-wrapper");
 const joke = new DadJokes();
 
 module.exports = class DogCommand extends commando.Command {
@@ -14,6 +14,7 @@ module.exports = class DogCommand extends commando.Command {
   }
 
   async run(message) {
-    message.reply(joke.randomJoke());
+    let dadjoke = await joke.randomJoke();
+    message.reply(dadjoke);
   }
 };
