@@ -1,7 +1,7 @@
 require("dotenv").config();
 const commando = require("discord.js-commando");
 const DadJokes = require('dadjokes-wrapper');
-const joke = new Dadjokes();
+const joke = new DadJokes();
 
 module.exports = class DogCommand extends commando.Command {
   constructor(client) {
