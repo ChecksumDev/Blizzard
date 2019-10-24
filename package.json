@@ -9,6 +9,7 @@
   "author": "CollierDevs",
   "license": "ISC",
   "dependencies": {
+    "dadjokes-wrapper": "^0.1.4",
     "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
     "dotenv": "^8.2.0",

@@ -1,6 +1,7 @@
 require("dotenv").config();
 const commando = require("discord.js-commando");
-const Discord = require("discord.js");
+const DadJokes = require('dadjokes-wrapper');
+const joke = new Dadjokes();
 
 module.exports = class DogCommand extends commando.Command {
   constructor(client) {
@@ -13,15 +14,6 @@ module.exports = class DogCommand extends commando.Command {
   }
 
   async run(message) {
-    const dadJoke = await fetch("https://icanhazdadjoke.com/", {
-      headers: {
-        Accept: "application/json"
-      }
-    });
-    const dadJokeJSON = await dadJoke.json();
-    if (dadJokeJSON.status === 200) {
-      return dadJokeJSON.joke;
-    }
-    message.reply(dadJoke);
+    message.reply(joke.randomJoke());
   }
 };
