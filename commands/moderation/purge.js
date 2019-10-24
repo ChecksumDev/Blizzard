@@ -1,21 +1,33 @@
-const { Command } = require('discord.js-commando');
+const { Command } = require("discord.js-commando");
 
 module.exports = class PurgeCommand extends Command {
-	constructor(client) {
-		super(client, {
-			name: 'purge',
-			group: 'moderation',
-			memberName: 'purge',
-			description: 'Purges the Chat',
-      clientPermissions: ['MANAGE_MESSAGES'],
-      userPermissions: ['MANAGE_MESSAGES'],
-		});
-	}
+  constructor(client) {
+    super(client, {
+      name: "purge",
+      group: "moderation",
+      memberName: "purge",
+      description: "Purges the Chat",
+      clientPermissions: ["MANAGE_MESSAGES"],
+      userPermissions: ["MANAGE_MESSAGES"],
+      args: [
+        {
+          key: "purgecount",
+          prompt: "How many messages should I purge??",
+          type: "integer"
+        }
+      ]
+    });
+  }
 
-	run(message, args) {
-		let messagecount = parseInt(args[0]);
-      message.channel.fetchMessages({ limit: messagecount })
-  .then(messages => message.channel.bulkDelete(messages));
-		message.reply("Deleted " + messagecount + " messages. 👍")
-	}
+  run(message, args) {
+    message.channel
+      .fetchMessages({
+        limit: args.purgecount
+      })
+      .then(messages => {
+        message.channel
+          .bulkDelete(messages)
+          .catch(error => console.log(error.stack));
+      });
+  }
 };
