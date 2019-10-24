@@ -3,7 +3,7 @@ const commando = require("discord.js-commando");
 const DadJokes = require("dadjokes-wrapper");
 const joke = new DadJokes();
 
-module.exports = class DogCommand extends commando.Command {
+module.exports = class JokeCommand extends commando.Command {
   constructor(client) {
     super(client, {
       name: "joke",
