@@ -1,6 +1,9 @@
 require("dotenv").config();
 const { CommandoClient } = require("discord.js-commando");
 const path = require("path");
+const Keyv = require("keyv")
+const database = new Keyv(`postgresql://${process.env(DB_USER)}:${process.env(DB_PASSWORD)}@${process.env(DB_URL)}:5432/${process.env(DB_DATABASE)}`);
+
 
 const client = new CommandoClient({
   commandPrefix: "b?",
