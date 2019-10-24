@@ -16,6 +16,7 @@
     "query-string": "^6.1.0",
     "r2": "^2.0.1",
     "keyv": "^3.1.0",
-    "@keyv/postgres": "^1.0.16"
+    "@keyv/postgres": "^1.0.16",
+    "canvas": "^1.0.0"
   }
 }
