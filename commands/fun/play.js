@@ -37,7 +37,7 @@ module.exports = class PlayCommand extends Command {
       name: "play",
       aliases: ["play-song", "add"],
       memberName: "play",
-      group: "music",
+      group: "fun",
       description: "Play any song or playlist from youtube",
       guildOnly: true,
       clientPermissions: ["SPEAK", "CONNECT"],
@@ -59,7 +59,7 @@ module.exports = class PlayCommand extends Command {
   async run(message, { query }) {
     // eslint-disable-next-line capitalized-comments
     // initial checking
-    var voiceChannel = message.member.voice.channel;
+    var voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) return message.say("Join a channel and try again");
     // End initial check
     if (message.guild.triviaData.isTriviaRunning == true)
