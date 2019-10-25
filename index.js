@@ -2,10 +2,25 @@
 /* eslint-disable no-unused-vars */
 require("dotenv").config();
 const { CommandoClient } = require("discord.js-commando");
+const { Structures } = require('discord.js');
 const path = require("path");
 const Keyv = require("keyv");
 const Canvas = require("canvas");
 const chalk = require("chalk");
+
+Structures.extend('Guild', Guild => {
+  class MusicGuild extends Guild {
+    constructor(client, data) {
+      super(client, data);
+      this.musicData = {
+        queue: [],
+        isPlaying: false,
+        songDispatcher: null
+      };
+    }
+  }
+  return MusicGuild;
+});
 
 const client = new CommandoClient({
   commandPrefix: "b?",
