@@ -221,7 +221,7 @@ module.exports = class PlayCommand extends Command {
             // display the current playing song as a nice little embed
             const videoEmbed = new MessageEmbed()
               .setThumbnail(queue[0].thumbnail) // song thumbnail
-              .setColor("GREEN")
+              .setColor("AQUA")
               .addField("Now Playing:", queue[0].title)
               .addField("Duration:", queue[0].duration);
             // also display next song title, if there is one in queue
