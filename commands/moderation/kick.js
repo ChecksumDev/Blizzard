@@ -10,6 +10,7 @@ module.exports = class KickCommand extends commando.Command {
             description: 'Just a kick command :)',
             clientPermissions: ['KICK_MEMBERS'],
             userPermissions: ['KICK_MEMBERS'],
+            guildOnly: true
         })
     }
 

@@ -15,7 +15,8 @@ module.exports = class PurgeCommand extends Command {
           prompt: "How many messages should I purge??",
           type: "integer"
         }
-      ]
+      ],
+      guildOnly: true
     });
   }
 

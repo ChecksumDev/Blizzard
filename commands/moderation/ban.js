@@ -9,6 +9,7 @@ module.exports = class BanCommand extends commando.Command {
             description: 'Just a ban command :)',
             clientPermissions: ['BAN_MEMBERS'],
             userPermissions: ['BAN_MEMBERS'],
+            guildOnly: true
         })
     }
 
