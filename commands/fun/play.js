@@ -30,10 +30,10 @@ module.exports = class PlayMusicCommand extends commando.Command {
   async run(message, args) {
     if (message.channel.type !== 'text') return message.reply("You can only use this command in a server.");
 
-    const voiceChannel = message.member.voice.channel;
+    const voiceChannel = message.member.voiceChannel;
 
     if (!voiceChannel) {
-        return message.reply('Please join a voice channel');
+        return message.reply('Please join a voice channel !');
     }
 
     voiceChannel.join().then(connection => {
