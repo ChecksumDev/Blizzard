@@ -1,7 +1,6 @@
 // This is just a command made for fun, dont critic me for this haha.
 const commando = require("discord.js-commando");
 const Discord = require("discord.js");
-const oneLine = require("common-tags").oneLine;
 
 module.exports = class AnakinSandCommand extends commando.Command {
   constructor(client) {
