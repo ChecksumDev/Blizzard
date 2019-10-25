@@ -16,7 +16,8 @@ module.exports = class UrbanCommand extends commando.Command {
           prompt: "What would you like to look up?",
           type: "string"
         }
-      ]
+      ],
+      guildOnly: true
     });
   }
 
