@@ -37,7 +37,7 @@ module.exports = class UrbanCommand extends commando.Command {
       );
     }
 
-    const [answer] = list;
+    let [answer] = list;
 
     const embed = new Discord.RichEmbed()
       .setColor("YELLOW")
