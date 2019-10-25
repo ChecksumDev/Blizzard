@@ -1,5 +1,4 @@
 const commando = require('discord.js-commando');
-const oneLine = require('common-tags').oneLine;
 
 module.exports = class BanCommand extends commando.Command {
     constructor(client) {

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 require("dotenv").config();
 const commando = require("discord.js-commando");
 const Discord = require("discord.js");
@@ -16,7 +17,7 @@ module.exports = class CatCommand extends commando.Command {
     });
   }
 
-  async run(message, args) {
+  async run(message) {
     try {
       var images = await this.loadImage(message.author.username);
       var image = images[0];

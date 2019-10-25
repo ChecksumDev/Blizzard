@@ -14,7 +14,7 @@ module.exports = class JokeCommand extends commando.Command {
   }
 
   async run(message) {
-    let dadjoke = await joke.randomJoke();
+    const dadjoke = await joke.randomJoke();
     message.reply(dadjoke);
   }
 };

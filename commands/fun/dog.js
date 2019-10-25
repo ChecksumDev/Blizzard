@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 require("dotenv").config();
 const commando = require("discord.js-commando");
 const Discord = require("discord.js");
@@ -16,12 +18,11 @@ module.exports = class DogCommand extends commando.Command {
     });
   }
 
-  async run(message, args) {
+  async run(message) {
     try {
       var images = await this.loadImage(message.author.username);
 
       var image = images[0];
-      var breed = image.breeds[0];
 
       let embed = new Discord.RichEmbed()
         .setTitle("A picture of a cute puppy!")

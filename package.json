@@ -27,5 +27,10 @@
     "request": "^2.88.0",
     "sylphy": "^0.4.5",
     "ytdl-core": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
