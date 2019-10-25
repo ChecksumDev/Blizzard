@@ -26,6 +26,7 @@
     "query-string": "^6.8.3",
     "r2": "^2.0.1",
     "request": "^2.88.0",
+    "simple-youtube-api": "^5.2.1",
     "sylphy": "^0.4.5",
     "winston": "^3.2.1",
     "ytdl-core": "^1.0.0"
