@@ -209,7 +209,7 @@ module.exports = class PlayCommand extends Command {
           }
 
         
-         * if (video.duration.hours !== 0) {
+        if (video.duration.hours !== 0) {
             songEmbed.delete();
             return message.say('I cannot play videos longer than 1 hour');
          }
