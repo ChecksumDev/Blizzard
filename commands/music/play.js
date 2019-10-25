@@ -139,7 +139,7 @@ module.exports = class PlayCommand extends Command {
           {
             max: 1,
             maxProcessed: 1,
-            time: 10000,
+            time: 20000,
             errors: ["time"]
           }
         );
