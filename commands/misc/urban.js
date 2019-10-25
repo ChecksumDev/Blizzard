@@ -21,6 +21,7 @@ module.exports = class UrbanCommand extends commando.Command {
   }
 
   async run(message, args) {
+    if (!message.channel.nsfw) return message.reply("Command can only be used in NSFW Channels.");
     if (!args) return message.reply("Please specify your search");
     const trim = (str, max) =>
       str.length > max ? `${str.slice(0, max - 3)}...` : str;
