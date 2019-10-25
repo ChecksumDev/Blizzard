@@ -21,11 +21,13 @@
     "imdb-api": "^4.0.3",
     "keyv": "^3.1.0",
     "node-fetch": "^2.6.0",
+    "node-opus": "^0.3.3",
     "omdbapi": "^3.0.0",
     "query-string": "^6.8.3",
     "r2": "^2.0.1",
     "request": "^2.88.0",
     "sylphy": "^0.4.5",
+    "winston": "^3.2.1",
     "ytdl-core": "^1.0.0"
   },
   "devDependencies": {

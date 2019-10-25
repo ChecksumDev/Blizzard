@@ -6,11 +6,7 @@ const { Discord } = require("discord.js");
 const path = require("path");
 const Keyv = require("keyv");
 const Canvas = require("canvas");
-const database = new Keyv(
-  `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${
-    process.env.DB_URL
-  }:5432/${process.env.DB_DATABASE}`
-);
+const chalk = require("chalk");
 
 const client = new CommandoClient({
   commandPrefix: "b?",
@@ -32,10 +28,12 @@ client.registry
   .registerCommandsIn(path.join(__dirname, "commands"));
 
 client.on("ready", () => {
-  console.log("Logged in!");
+  console.log(chalk.greenBright("[Status]"), "Bot Online");
   client.user.setActivity("Blizzard | Server Moderation");
 });
 
-process.on('unhandledRejection', error => console.error('Uncaught Promise Rejection', error));
+process.on("uncaughtException", error =>
+  console.log(chalk.redBright("[Uncaught Exception]"), error)
+);
 
 client.login();
