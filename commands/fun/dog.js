@@ -24,7 +24,7 @@ module.exports = class DogCommand extends commando.Command {
 
       var image = images[0];
 
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
         .setTitle("A picture of a cute puppy!")
         .setImage(`${image.url}`)
         .setColor("GREEN")

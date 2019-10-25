@@ -21,7 +21,7 @@ module.exports = class CatCommand extends commando.Command {
     try {
       var images = await this.loadImage(message.author.username);
       var image = images[0];
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
         .setTitle("A picture of a cute kitty cat!")
         .setImage(`${image.url}`)
         .setColor("GREEN")
