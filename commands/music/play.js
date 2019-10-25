@@ -195,7 +195,7 @@ module.exports = class PlayCommand extends Command {
         songEmbed.delete();
       }
       return message.say(
-        "Something went wrong with searching the video you requested :("
+        "Error: Something went wrong playing that song, is it private?"
       );
     }
   }
@@ -221,11 +221,11 @@ module.exports = class PlayCommand extends Command {
             // display the current playing song as a nice little embed
             const videoEmbed = new MessageEmbed()
               .setThumbnail(queue[0].thumbnail) // song thumbnail
-              .setColor("#e9f931")
+              .setColor("GREEN")
               .addField("Now Playing:", queue[0].title)
               .addField("Duration:", queue[0].duration);
             // also display next song title, if there is one in queue
-            if (queue[1]) videoEmbed.addField("Next Song:", queue[1].title);
+            if (queue[1]) videoEmbed.addField("Next Up:", queue[1].title);
             message.say(videoEmbed); // send the embed to chat
             return queue.shift(); //  dequeue the song
           })
