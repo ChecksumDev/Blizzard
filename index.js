@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 require("dotenv").config();
 const { CommandoClient } = require("discord.js-commando");
-const { Structures } = require("discord.js");
 const path = require("path");
 const Keyv = require("keyv");
 const Canvas = require("canvas");
@@ -27,26 +26,6 @@ client.registry
   .registerDefaultGroups()
   .registerDefaultCommands()
   .registerCommandsIn(path.join(__dirname, "commands"));
-Structures.extend("Guild", Guild => {
-  class MusicGuild extends Guild {
-    constructor(client, data) {
-      super(client, data);
-      this.musicData = {
-        queue: [],
-        isPlaying: false,
-        nowPlaying: null,
-        songDispatcher: null
-      };
-      this.triviaData = {
-        isTriviaRunning: false,
-        wasTriviaEndCalled: false,
-        triviaQueue: [],
-        triviaScore: new Map()
-      };
-    }
-  }
-  return MusicGuild;
-});
 
 client.on("ready", () => {
   console.log(chalk.greenBright("[Status]"), "Bot Online");
