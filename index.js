@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 require("dotenv").config();
 const { CommandoClient } = require("discord.js-commando");
 const { Discord } = require("discord.js");
