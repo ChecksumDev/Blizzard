@@ -10,9 +10,9 @@ module.exports = class PlayCommand extends Command {
     super(client, {
       name: "play",
       memberName: "play",
-      group: "music", // this means the folder the file is inside
+      group: "music",
       description: "Play any song or playlist from youtube",
-      guildOnly: true, // make this command available only in servers not dm's
+      guildOnly: true, 
       clientPermissions: ["SPEAK", "CONNECT"],
       args: [
         {
