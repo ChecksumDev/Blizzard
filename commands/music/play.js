@@ -124,14 +124,13 @@ module.exports = class PlayCommand extends Command {
       // create and display an embed which will present the user the 5 results
       // so he can choose his desired result
       const embed = new MessageEmbed()
-        .setColor("#e9f931")
-        .setTitle("Choose a song by commenting a number between 1 and 5")
+        .setColor("RED")
+        .setTitle("Please choose a song to play.")
         .addField("Song 1", vidNameArr[0])
         .addField("Song 2", vidNameArr[1])
         .addField("Song 3", vidNameArr[2])
         .addField("Song 4", vidNameArr[3])
-        .addField("Song 5", vidNameArr[4])
-        .addField("Exit", "exit"); // user can reply with 'exit' if none matches
+        .addField("Song 5", vidNameArr[4]);
       var songEmbed = await message.say({ embed });
       try {
         // wait 1 minute for the user's response
@@ -140,7 +139,7 @@ module.exports = class PlayCommand extends Command {
           {
             max: 1,
             maxProcessed: 1,
-            time: 60000,
+            time: 10000,
             errors: ["time"]
           }
         );
@@ -150,7 +149,7 @@ module.exports = class PlayCommand extends Command {
         console.error(err);
         songEmbed.delete();
         return message.say(
-          "Please try again and enter a number between 1 and 5 or exit"
+          "Please try again and enter a number between 1 and 5\nYou can exit the menu by typing `exit`"
         );
       }
       // if the user responded with 'exit', cancel the command
