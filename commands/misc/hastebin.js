@@ -26,6 +26,7 @@ module.exports = class HastebinCommand extends commando.Command {
   }
 
   async run(message, args) {
+    if (message.author.bot) return;
     hastebin(args.haste)
       .then(result => {
         let embed = new MessageEmbed()

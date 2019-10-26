@@ -13,6 +13,7 @@ module.exports = class LeaveCommand extends Command {
   }
 
   run(message) {
+    if (message.author.bot) return;
     var voiceChannel = message.member.voice.channel;
     if (!voiceChannel) return message.reply('Join a channel and try again');
 

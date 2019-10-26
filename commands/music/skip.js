@@ -14,6 +14,7 @@ module.exports = class SkipCommand extends Command {
   }
 
   run(message) {
+    if (message.author.bot) return;
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) return message.reply('Join a channel and try again');
 

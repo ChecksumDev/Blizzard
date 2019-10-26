@@ -21,6 +21,7 @@ module.exports = class PurgeCommand extends Command {
   }
 
   run(message, args) {
+    if (message.author.bot) return;
     if (args.purgecount > 100)
       return message.reply(
         "You can currently only purge up to 100 messages at a time."

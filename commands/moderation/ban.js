@@ -14,6 +14,7 @@ module.exports = class BanCommand extends commando.Command {
     }
 
     async run(msg) {
+        if (msg.author.bot) return;
         var member = msg.mentions.members.first();
         member.ban().then((member) => {
             // Successmessage

@@ -22,7 +22,7 @@ module.exports = class UrbanCommand extends commando.Command {
   }
 
   async run(message, args) {
-    // Blocks command usage if not in NSFW channel, because of NSFW content in the urban dictionary.
+    if (message.author.bot) return;
     if (!message.channel.nsfw)
       return message.reply("Command can only be used in NSFW Channels.");
     if (!args) return message.reply("Please specify your search");

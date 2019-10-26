@@ -15,6 +15,7 @@ module.exports = class KickCommand extends commando.Command {
     }
 
     async run(msg) {
+        if (msg.author.bot) return;
         var member = msg.mentions.members.first();
         member.kick().then((member) => {
             // Successmessage

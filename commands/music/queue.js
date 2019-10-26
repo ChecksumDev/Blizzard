@@ -14,6 +14,7 @@ module.exports = class QueueCommand extends Command {
   }
 
   run(message) {
+    if (message.author.bot) return;
     if (message.guild.musicData.queue.length == 0)
       return message.say("There are no songs in the queue!");
     const titleArray = [];

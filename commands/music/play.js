@@ -12,7 +12,7 @@ module.exports = class PlayCommand extends Command {
       memberName: "play",
       group: "music",
       description: "Play any song or playlist from youtube",
-      guildOnly: true, 
+      guildOnly: true,
       clientPermissions: ["SPEAK", "CONNECT"],
       args: [
         {
@@ -27,6 +27,7 @@ module.exports = class PlayCommand extends Command {
   }
 
   async run(message, { query }) {
+    if (message.author.bot) return;
     // don't let users run this command if they are not in a voice channel
     var voiceChannel = message.member.voice.channel;
     if (!voiceChannel) return message.say("Join a channel and try again");
