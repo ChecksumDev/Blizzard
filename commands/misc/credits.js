@@ -21,7 +21,7 @@ module.exports = class CreditsCommand extends commando.Command {
         let embed = new MessageEmbed()
         .setTitle("Bot Credits")
         .setDescription("Blizzard is created by CollierDevs#2407")
-        .setFooter("Blizzard made with 💖 and ☕")
+        .setFooter("Blizzard is made with 💖 and ☕")
         .setColor("AQUA")
         msg.channel.send(embed)
     }
