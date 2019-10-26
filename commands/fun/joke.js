@@ -14,6 +14,7 @@ module.exports = class JokeCommand extends commando.Command {
   }
 
   async run(message) {
+    if (message.author.bot) return;
     const dadjoke = await joke.randomJoke();
     message.reply(dadjoke);
   }

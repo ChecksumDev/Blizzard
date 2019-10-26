@@ -18,6 +18,7 @@ module.exports = class CatCommand extends commando.Command {
   }
 
   async run(message) {
+    if (message.author.bot) return;
     try {
       var images = await this.loadImage(message.author.username);
       var image = images[0];

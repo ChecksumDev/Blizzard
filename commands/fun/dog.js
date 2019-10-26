@@ -19,6 +19,7 @@ module.exports = class DogCommand extends commando.Command {
   }
 
   async run(message) {
+    if (message.author.bot) return;
     try {
       var images = await this.loadImage(message.author.username);
 
