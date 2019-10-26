@@ -31,7 +31,7 @@ module.exports = class SuggestCommand extends commando.Command {
         if (msg.author.bot) return;
         msg.reply("Thank you for your suggestion, I have sent it over to my Developers!")
         let suggestion = new MessageEmbed()
-        .setAuthor(`Suggestion from ${msg.author.tag} | ${msg.author.id}`, msg.author.DisplayAvatarURL)
+        .setAuthor(`Suggestion from ${msg.author.tag} | ${msg.author.id}`, msg.author.displayAvatarURL)
         .addField("Suggestion", args.suggestion)
         .setColor("AQUA")
         .setTimestamp()
