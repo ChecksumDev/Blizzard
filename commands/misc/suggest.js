@@ -35,6 +35,6 @@ module.exports = class SuggestCommand extends commando.Command {
         .addField("Suggestion", args.suggestion)
         .setColor("AQUA")
         .setTimestamp()
-        this.client.channels.get(637457372603875328).send(suggestion)
+        this.client.channels.get('637457372603875328').send(suggestion)
     }
 }
