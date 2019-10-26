@@ -27,11 +27,11 @@ module.exports = class PurgeCommand extends Command {
         "You can currently only purge up to 100 messages at a time."
       );
 
-    await msg.channel.messages
+    await message.channel.messages
       .fetch({ limit: args.purgecount })
       .then(messages => {
         // Fetches the messages
-        msg.channel.bulkDelete(messages);
+        message.channel.bulkDelete(messages);
       })
       .then(() => {
         message
