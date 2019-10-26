@@ -20,7 +20,7 @@ module.exports = class PurgeCommand extends Command {
     });
   }
 
-  run(message, args) {
+  async run(message, args) {
     if (message.author.bot) return;
     if (args.purgecount > 100)
       return message.reply(
