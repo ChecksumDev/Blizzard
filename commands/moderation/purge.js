@@ -21,6 +21,7 @@ module.exports = class PurgeCommand extends Command {
   }
 
   async run(message, args) {
+    // Purge Command!
     if (message.author.bot) return;
     if (args.purgecount > 100)
       return message.reply(
