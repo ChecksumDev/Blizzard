@@ -29,7 +29,6 @@ module.exports = class DogCommand extends commando.Command {
         .setTitle("A picture of a cute puppy!")
         .setImage(`${image.url}`)
         .setColor("GREEN")
-        .setFooter("Powered by TheDogAPI.com");
       message.channel.send(embed);
     } catch (error) {
       console.log(error);

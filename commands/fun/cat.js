@@ -26,7 +26,6 @@ module.exports = class CatCommand extends commando.Command {
         .setTitle("A picture of a cute kitty cat!")
         .setImage(`${image.url}`)
         .setColor("GREEN")
-        .setFooter("Powered by TheCatAPI.com");
       message.channel.send(embed);
     } catch (error) {
       console.log(error);
