@@ -31,13 +31,13 @@ module.exports = class HugCommand extends commando.Command {
 
   async run(msg) {
     const user = msg.mentions.users.first();
-    await Tenor.Search.Random("hugs", "1")
+    Tenor.Search.Random("anime-hug-gifs", "1")
       .then(Results => {
         Results.forEach(Post => {
-          let hugged = new Discord.MessageEmbed()
-            .setTitle(`${user.tag} was furiousley hugged by ${msg.author.tag}`)
-            .setImage(`${Post.url}`);
-          msg.channel.send(hugged);
+          msg.channel.send(
+            user.tag + " Was furiousley hugged by " + msg.author.tag
+          );
+          msg.channel.send(`**${Post.url}**`)
         });
       })
       .catch(console.error);
