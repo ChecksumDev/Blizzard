@@ -16,7 +16,7 @@ module.exports = class AnakinSandCommand extends commando.Command {
     if (msg.author.bot) return;
     if (msg.author.id !== "608738876093104135")
       return msg.reply("You are not worthy.");
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
       .setThumbnail(
         "https://instagram.fslc2-1.fna.fbcdn.net/vp/7e8b8572c6282f75b10c537bc1dfd0b9/5E5E0817/t51.2885-15/e35/70842262_2268387943272205_742320355903138557_n.jpg?_nc_ht=instagram.fslc2-1.fna.fbcdn.net&_nc_cat=101"
       )
