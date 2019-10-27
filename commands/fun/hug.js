@@ -31,7 +31,7 @@ module.exports = class HugCommand extends commando.Command {
 
   async run(msg) {
     const user = msg.mentions.users.first();
-    await Tenor.Search.Random("anime-hug-gifs", "1")
+    await Tenor.Search.Random("hugs", "1")
       .then(Results => {
         Results.forEach(Post => {
           let hugged = new Discord.MessageEmbed()
