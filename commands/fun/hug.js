@@ -31,7 +31,7 @@ module.exports = class HugCommand extends commando.Command {
 
   async run(msg) {
     const user = msg.mentions.users.first();
-    Tenor.Search.Random("hug", "20")
+    Tenor.Search.Random("hug", "1")
       .then(Results => {
         Results.forEach(Post => {
           msg.channel.send(
