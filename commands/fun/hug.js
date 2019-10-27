@@ -4,7 +4,7 @@ const oneLine = require("common-tags").oneLine;
 const Discord = require("discord.js");
 const Tenor = require("tenorjs").client({
   Key: process.env.TENORAPI, // https://tenor.com/developer/keyregistration
-  Filter: "low", // "off", "low", "medium", "high", not case sensitive
+  Filter: "off", // "off", "low", "medium", "high", not case sensitive
   Locale: "en_US", // Your locale here, case-sensitivity depends on input
   MediaFilter: "minimal", // either minimal or basic, not case sensitive
   DateFormat: "D/MM/YYYY - H:mm:ss A" // Change this accordingly
@@ -31,7 +31,7 @@ module.exports = class HugCommand extends commando.Command {
 
   async run(msg) {
     const user = msg.mentions.users.first();
-    Tenor.Search.Random("anime-hug-gifs", "20")
+    Tenor.Search.Random("hug", "20")
       .then(Results => {
         Results.forEach(Post => {
           msg.channel.send(
