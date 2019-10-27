@@ -37,7 +37,7 @@ module.exports = class HugCommand extends commando.Command {
           msg.channel.send(
             user.tag + " Was furiousley hugged by " + msg.author.tag
           );
-          msg.channel.send(`${Post.url}`)
+          msg.channel.send(`${Post.url}`);
         });
       })
       .catch(console.error);
