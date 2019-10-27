@@ -26,7 +26,8 @@ const client = new CommandoClient({
   commandPrefix: "b?",
   unknownCommandResponse: false,
   disableEveryone: false,
-  invite: "https://discord.gg/PWsa2c3"
+  invite: "https://discord.gg/PWsa2c3",
+  owner: process.env.OWNERID
 });
 
 client.registry
