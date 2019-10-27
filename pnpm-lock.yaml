@@ -19,6 +19,7 @@ dependencies:
   request: 2.88.0
   simple-youtube-api: 5.2.1
   sylphy: 0.4.5
+  util: 0.12.1
   winston: 3.2.1
   ytdl-core: 1.0.0
 devDependencies:
@@ -423,7 +424,6 @@ packages:
   /define-properties/1.1.3:
     dependencies:
       object-keys: 1.1.1
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -521,7 +521,6 @@ packages:
       object-keys: 1.1.1
       string.prototype.trimleft: 2.1.0
       string.prototype.trimright: 2.1.0
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -531,7 +530,6 @@ packages:
       is-callable: 1.1.4
       is-date-object: 1.0.1
       is-symbol: 1.0.2
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -685,7 +683,6 @@ packages:
     resolution:
       integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
   /function-bind/1.1.1:
-    dev: true
     resolution:
       integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
   /gauge/2.7.4:
@@ -812,7 +809,6 @@ packages:
     resolution:
       integrity: sha512-3ToOva++HaW+eCpgqZrCfN51IPB+7bJNVT6CUATzueB5Heb8o6Nam0V3HG5dlDvZU1Gn5QLcbahiKw/XVk5JJw==
   /has-symbols/1.0.0:
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -830,7 +826,6 @@ packages:
   /has/1.0.3:
     dependencies:
       function-bind: 1.1.1
-    dev: true
     engines:
       node: '>= 0.4.0'
     resolution:
@@ -919,6 +914,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-lvsKk2wSur1v8XUqF9BWFqvQlMY=
+  /is-arguments/1.0.4:
+    dev: false
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha512-xPh0Rmt8NE65sNzvyUmWgI1tz3mKq74lGA0mL8LYZcoIzKOzDh6HmrYm3d18k60nHerC8A9Km8kYu87zfSFnLA==
   /is-arrayish/0.2.1:
     dev: true
     resolution:
@@ -928,13 +929,11 @@ packages:
     resolution:
       integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==
   /is-callable/1.1.4:
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
       integrity: sha512-r5p9sxJjYnArLjObpjA4xu5EKI3CuKHkJXMhT7kwbpUyIFD1n5PMAsoPvWnvtZiNz7LjkYDRZhd7FlI0eMijEA==
   /is-date-object/1.0.1:
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -947,6 +946,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-754xOG8DGn8NZDr4L95QxFfvAMs=
+  /is-generator-function/1.0.7:
+    dev: false
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha512-YZc5EwyO4f2kWCax7oegfuSr9mFz1ZvieNYBEjmukLxgXfBUbxAWGVF7GZf0zidYtoBl3WvC07YK0wT76a+Rtw==
   /is-object/1.0.1:
     dev: false
     resolution:
@@ -960,7 +965,6 @@ packages:
   /is-regex/1.0.4:
     dependencies:
       has: 1.0.3
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -980,7 +984,6 @@ packages:
   /is-symbol/1.0.2:
     dependencies:
       has-symbols: 1.0.0
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -1321,11 +1324,9 @@ packages:
     resolution:
       integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
   /object-inspect/1.6.0:
-    dev: true
     resolution:
       integrity: sha512-GJzfBZ6DgDAmnuaM3104jR4s1Myxr3Y3zfIyN4z3UdqN69oSRacNK8UhnobDdC+7J2AHCjGwxQubNJfE70SXXQ==
   /object-keys/1.1.1:
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -1347,7 +1348,6 @@ packages:
       es-abstract: 1.16.0
       function-bind: 1.1.1
       has: 1.0.3
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -1992,7 +1992,6 @@ packages:
     dependencies:
       define-properties: 1.1.3
       function-bind: 1.1.1
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -2001,7 +2000,6 @@ packages:
     dependencies:
       define-properties: 1.1.3
       function-bind: 1.1.1
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -2154,6 +2152,16 @@ packages:
     dev: false
     resolution:
       integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+  /util/0.12.1:
+    dependencies:
+      inherits: 2.0.4
+      is-arguments: 1.0.4
+      is-generator-function: 1.0.7
+      object.entries: 1.1.0
+      safe-buffer: 5.2.0
+    dev: false
+    resolution:
+      integrity: sha512-MREAtYOp+GTt9/+kwf00IYoHZyjM8VU4aVrkzUlejyqaIjd2GztVl5V9hGXKlvBKE3gENn/FMfHE5v6hElXGcQ==
   /uuid/3.3.3:
     dev: false
     hasBin: true
@@ -2297,6 +2305,7 @@ packages:
       discord.js: ^12.0.0
       sqlite: ^3.0.0
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/discordjs/Commando/tar.gz/4beeec829ed25fc2c6ec0896edf7e0ac4d8bfcf0'
     version: 0.11.0-dev
   github.com/discordjs/discord.js/16db92ede8dc164346eca8482ea008cb21032c7b_node-opus@0.3.3:
@@ -2351,5 +2360,6 @@ specifiers:
   request: ^2.88.0
   simple-youtube-api: ^5.2.1
   sylphy: ^0.4.5
+  util: ^0.12.1
   winston: ^3.2.1
   ytdl-core: ^1.0.0
