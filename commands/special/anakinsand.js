@@ -13,7 +13,7 @@ module.exports = class AnakinSandCommand extends commando.Command {
   }
 
   async run(msg) {
-    if (message.author.bot) return;
+    if (msg.author.bot) return;
     if (msg.author.id !== "608738876093104135")
       return msg.reply("You are not worthy.");
     let embed = new Discord.RichEmbed()
