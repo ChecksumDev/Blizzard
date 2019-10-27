@@ -19,6 +19,7 @@ dependencies:
   request: 2.88.0
   simple-youtube-api: 5.2.1
   sylphy: 0.4.5
+  tenorjs: 1.0.7
   util: 0.12.1
   winston: 3.2.1
   ytdl-core: 1.0.0
@@ -1197,6 +1198,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
+  /moment/2.24.0:
+    dev: false
+    resolution:
+      integrity: sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
   /ms/2.0.0:
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
@@ -1824,6 +1829,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
+  /roi/0.18.0:
+    deprecated: 'This module is deprecated, please use other http client.'
+    dev: false
+    resolution:
+      integrity: sha512-nRUZ5fJxnU9SUAc30Pul10O4LlWqdpXh1xunb3zsR7FA/NJ4yPNzL2ViTgAB7H70YqLsfGQRghvaff8ZcV/7Ug==
   /safe-buffer/5.1.2:
     dev: false
     resolution:
@@ -2066,6 +2076,14 @@ packages:
       node: '>=4.5'
     resolution:
       integrity: sha512-w2VwSrBoHa5BsSyH+KxEqeQBAllHhccyMFVHtGtdMpF4W7IRWfZjFiQceJPChOeTsSDVUpER2T8FA93pr0L+QA==
+  /tenorjs/1.0.7:
+    dependencies:
+      colors: 1.4.0
+      moment: 2.24.0
+      roi: 0.18.0
+    dev: false
+    resolution:
+      integrity: sha512-wMusuBJnfPmJg6N/dOXKiDThRE9NAVdqDsAGvhZraPMZ6cYBH1YcfDj3UrXCgxoeDxjXRQDuhEKcVAknRMv3qg==
   /text-hex/1.0.0:
     dev: false
     resolution:
@@ -2360,6 +2378,7 @@ specifiers:
   request: ^2.88.0
   simple-youtube-api: ^5.2.1
   sylphy: ^0.4.5
+  tenorjs: ^1.0.7
   util: ^0.12.1
   winston: ^3.2.1
   ytdl-core: ^1.0.0
