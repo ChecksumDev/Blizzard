@@ -34,10 +34,10 @@ client.on("message", message => {
   if (message.author.bot) return;
   if (message.content === "") return;
   let embed = new MessageEmbed()
-    .setAuthor(`${message.id}`, message.author.avatarURL)
     .addField("User", message.author.tag)
     .addField("Message", message.content)
     .addField("Channel", "#" + message.channel.name)
+    .setFooter("Message ID | " + message.id)
     .setColor("GREEN");
   let channel = client.guilds.get("636371108576100356").channels.find(
     channel =>
