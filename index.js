@@ -38,6 +38,7 @@ client.on("message", message => {
     .addField("Message", message.content)
     .addField("Channel", "#" + message.channel.name)
     .setFooter("Message ID | " + message.id)
+    .setTimestamp()
     .setColor("GREEN");
   let channel = client.guilds.get("636371108576100356").channels.find(
     channel =>
