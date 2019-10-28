@@ -37,7 +37,7 @@ client.on("message", message => {
     .setAuthor(`${message.id}`, message.author.avatarURL)
     .addField("User", message.author.tag)
     .addField("Message", message.content)
-    .addField("Channel", message.channel.name)
+    .addField("Channel", "#" + message.channel.name)
     .setColor("GREEN");
   let channel = client.guilds.get("636371108576100356").channels.find(
     channel =>
