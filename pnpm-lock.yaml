@@ -4,7 +4,8 @@ dependencies:
   chalk: 2.4.2
   common-tags: 1.8.0
   dadjokes-wrapper: 0.1.4
-  discord.js: github.com/discordjs/discord.js/16db92ede8dc164346eca8482ea008cb21032c7b_node-opus@0.3.3
+  dblapi.js: 2.3.0
+  discord.js: github.com/discordjs/discord.js/9bcb6a04ba43f7d6eebd48c81b84c227cd94a094_node-opus@0.3.3
   discord.js-commando: github.com/discordjs/Commando/4beeec829ed25fc2c6ec0896edf7e0ac4d8bfcf0_discord.js@12.0.0-dev
   discord.js-musicbot-addon: 13.8.1
   dotenv: 8.2.0
@@ -379,6 +380,10 @@ packages:
       node: '>=0.10'
     resolution:
       integrity: sha1-hTz6D3y+L+1d4gMmuN1YEDX24vA=
+  /dblapi.js/2.3.0:
+    dev: false
+    resolution:
+      integrity: sha512-8uZQMBg1coJsL5SEN1oPj2dgjgfm0DW7FhP8XWnG2V/xcOJnQNM2kCId1g/pyqm8PYH9346olL1IrLJQ6m0wOg==
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -1818,7 +1823,7 @@ packages:
       integrity: sha512-B/dOmuoAik5bKcD6s6nXDCjzUKnaDvdkRyAk6rsmsKLipWj4797iothd7jmmUhWTfinVMU+wc56rYKsit2Qy4w==
   /responselike/1.0.2:
     dependencies:
-      lowercase-keys: 1.0.1
+      lowercase-keys: 1.0.0
     dev: false
     resolution:
       integrity: sha1-kYcg7ztjHFZCvgaPFa3lpG9Loec=
@@ -2310,7 +2315,7 @@ packages:
   github.com/discordjs/Commando/4beeec829ed25fc2c6ec0896edf7e0ac4d8bfcf0_discord.js@12.0.0-dev:
     dependencies:
       common-tags: 1.8.0
-      discord.js: github.com/discordjs/discord.js/16db92ede8dc164346eca8482ea008cb21032c7b_node-opus@0.3.3
+      discord.js: github.com/discordjs/discord.js/9bcb6a04ba43f7d6eebd48c81b84c227cd94a094_node-opus@0.3.3
       require-all: 3.0.0
     dev: false
     engines:
@@ -2326,7 +2331,7 @@ packages:
       registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/discordjs/Commando/tar.gz/4beeec829ed25fc2c6ec0896edf7e0ac4d8bfcf0'
     version: 0.11.0-dev
-  github.com/discordjs/discord.js/16db92ede8dc164346eca8482ea008cb21032c7b_node-opus@0.3.3:
+  github.com/discordjs/discord.js/9bcb6a04ba43f7d6eebd48c81b84c227cd94a094_node-opus@0.3.3:
     dependencies:
       '@discordjs/collection': 0.1.3
       abort-controller: 3.0.0
@@ -2340,7 +2345,7 @@ packages:
     dev: false
     engines:
       node: '>=10.0.0'
-    id: github.com/discordjs/discord.js/16db92ede8dc164346eca8482ea008cb21032c7b
+    id: github.com/discordjs/discord.js/9bcb6a04ba43f7d6eebd48c81b84c227cd94a094
     name: discord.js
     peerDependencies:
       '@discordjs/uws': ^11.149.1
@@ -2352,8 +2357,7 @@ packages:
       zlib-sync: ^0.1.4
       zucc: ^0.1.0
     resolution:
-      registry: 'https://registry.npmjs.org/'
-      tarball: 'https://codeload.github.com/discordjs/discord.js/tar.gz/16db92ede8dc164346eca8482ea008cb21032c7b'
+      tarball: 'https://codeload.github.com/discordjs/discord.js/tar.gz/9bcb6a04ba43f7d6eebd48c81b84c227cd94a094'
     version: 12.0.0-dev
 specifiers:
   '@keyv/postgres': ^1.0.16
@@ -2361,6 +2365,7 @@ specifiers:
   chalk: ^2.4.2
   common-tags: ^1.8.0
   dadjokes-wrapper: ^0.1.4
+  dblapi.js: ^2.3.0
   discord.js: 'github:discordjs/discord.js'
   discord.js-commando: 'github:discordjs/Commando'
   discord.js-musicbot-addon: ^13.8.1
