@@ -94,6 +94,7 @@ client.on("guildCreate", async guild => {
   }
 });
 client.on("ready", () => {
+  console.log(¨Blizzard  Copyright (C) 2019-2020  CollierPlays This program comes with ABSOLUTELY NO WARRANTY; This is free software, and you are welcome to redistribute it under the exact same liscense file¨)
   client.guilds.forEach(g => {
     let logchannelfix = g.name
       .split(" ")
