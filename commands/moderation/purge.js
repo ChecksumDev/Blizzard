@@ -32,10 +32,10 @@ module.exports = class PurgeCommand extends Command {
       .fetch({ limit: args.purgecount })
       .then(messages => {
         // Fetches the messages
-        message.channel.bulkDelete(messages);
+        await message.channel.bulkDelete(messages);
       })
       .then(() => {
-        message
+        await message
           .reply(`🗑️ Sucessfully Deleted ${args.purgecount} messages.`)
           .then(e => {
             e.delete(2000);
