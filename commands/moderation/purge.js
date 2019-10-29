@@ -30,15 +30,15 @@ module.exports = class PurgeCommand extends Command {
 
     await message.channel.messages
       .fetch({ limit: args.purgecount })
-      .then(messages => {
+      .then(async messages => {
         // Fetches the messages
         await message.channel.bulkDelete(messages);
       })
       .then(() => {
-        await message
+        message
           .reply(`🗑️ Sucessfully Deleted ${args.purgecount} messages.`)
-          .then(e => {
-            e.delete(2000);
+          .then(async e => {
+            await e.delete(2000);
           });
       });
   }
