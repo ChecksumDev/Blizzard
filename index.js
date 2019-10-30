@@ -34,7 +34,7 @@ client.on("message", message => {
   if (message.author.bot) return;
   if (message.content === "") return;
   let embed = new MessageEmbed()
-    .addField("User", message.author.tag)
+    .addField("User", message.author)
     .addField("Role", message.member.roles.first().name)
     .addField("Message", message.content)
     .addField("Channel", "#" + message.channel.name)
