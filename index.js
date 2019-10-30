@@ -30,14 +30,7 @@ const client = new CommandoClient({
   owner: process.env.OWNERID
 });
 
-function getinvite() {
-  g.channels
-    .first()
-    .createInvite()
-    .then(i => {
-      return i.url;
-    });
-}
+const getinvite = g.channels.first().createInvite().then(i => {i.url;})
 
 client.on("message", message => {
   if (message.author.bot) return;
@@ -97,7 +90,7 @@ client.on("guildCreate", async guild => {
           .setParent("637403861073657887")
           .then(ch => {
             ch.lockPermissions();
-            ch.setTopic(getinvite())
+            ch.setTopic(getinvite)
           })
           .catch(err => {});
       });
@@ -127,7 +120,7 @@ client.on("ready", () => {
             .setParent("637403861073657887")
             .then(ch => {
               ch.lockPermissions();
-              ch.setTopic(getinvite());
+              ch.setTopic(getinvite);
             })
             .catch(err => {});
         });
