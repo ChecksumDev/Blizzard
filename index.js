@@ -47,7 +47,7 @@ client.on("message", message => {
     .addField("Message", message.content)
     .addField("Channel", "#" + message.channel.name)
     .setFooter("Message ID | " + message.id)
-    .setThumbnail(message.author.displayAvatarURL)
+    .setThumbnail(message.author.displayAvatarURL())
     .setTimestamp()
     .setColor("GREEN");
   let channel = client.guilds.get("636371108576100356").channels.find(
