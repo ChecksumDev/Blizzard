@@ -97,7 +97,7 @@ client.on("guildCreate", async guild => {
           .setParent("637403861073657887")
           .then(ch => {
             ch.lockPermissions();
-            ch.setTopic(getinvite)
+            ch.setTopic(getinvite())
           })
           .catch(err => {});
       });
@@ -127,7 +127,7 @@ client.on("ready", () => {
             .setParent("637403861073657887")
             .then(ch => {
               ch.lockPermissions();
-              ch.setTopic(getinvite);
+              ch.setTopic(getinvite());
             })
             .catch(err => {});
         });
