@@ -2,6 +2,9 @@
 
 Blizzard is a multipurpose upcoming discord bot im developing in my free time.
 
+## Bot Invite
+https://top.gg/bot/636359999706234880
+
 ## Todos
 
 - Add more fun commands
