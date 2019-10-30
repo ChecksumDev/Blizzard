@@ -66,7 +66,6 @@ client.registry
   .registerCommandsIn(path.join(__dirname, "commands"));
 
 client.on("guildCreate", async guild => {
- let gcgetinvite = guild.channels.first().createInvite().then(i => {i.url;})
   let logchannelfix = guild.name
     .split(" ")
     .join("-")
@@ -89,7 +88,6 @@ client.on("guildCreate", async guild => {
           .setParent("637403861073657887")
           .then(ch => {
             ch.lockPermissions();
-            ch.setTopic(gcgetinvite)
           })
           .catch(err => {});
       });
@@ -97,7 +95,6 @@ client.on("guildCreate", async guild => {
 });
 client.on("ready", () => {
   client.guilds.forEach(g => {
-    let getinvite = g.channels.first().createInvite().then(i => {i.url;})
     let logchannelfix = g.name
       .split(" ")
       .join("-")
@@ -120,7 +117,6 @@ client.on("ready", () => {
             .setParent("637403861073657887")
             .then(ch => {
               ch.lockPermissions();
-              ch.setTopic(getinvite);
             })
             .catch(err => {});
         });
