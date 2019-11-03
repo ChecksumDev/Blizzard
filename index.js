@@ -85,7 +85,7 @@ client.on("guildCreate", async guild => {
       .get("636371108576100356")
       .channels.create(`${logchannelfix}`)
       .then(channel => {
-        channel
+        channelz
           .setParent("637403861073657887")
           .then(ch => {
             ch.lockPermissions();
