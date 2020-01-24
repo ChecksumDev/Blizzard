@@ -17,7 +17,7 @@
     "dblapi.js": "^2.3.1",
     "discord.js": "github:discordjs/discord.js",
     "discord.js-commando": "github:discordjs/Commando",
-    "discord.js-musicbot-addon": "^13.8.1",
+    "discord.js-musicbot-addon": "^13.9.1",
     "dotenv": "^8.2.0",
     "hastebin-gen": "^2.0.5",
     "imdb-api": "^4.0.3",
