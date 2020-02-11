@@ -27,7 +27,7 @@
     "omdbapi": "^3.0.0",
     "query-string": "^6.10.1",
     "r2": "^2.0.1",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "simple-youtube-api": "^5.2.1",
     "sylphy": "^0.4.5",
     "tenorjs": "^1.0.7",
