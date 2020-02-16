@@ -33,7 +33,7 @@
     "tenorjs": "^1.0.7",
     "util": "^0.12.1",
     "winston": "^3.2.1",
-    "ytdl-core": "^1.0.7"
+    "ytdl-core": "^1.0.8"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^14.0.0",
