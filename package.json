@@ -31,7 +31,7 @@
     "simple-youtube-api": "^5.2.1",
     "sylphy": "^0.4.5",
     "tenorjs": "^1.0.7",
-    "util": "^0.12.2",
+    "util": "^0.12.3",
     "winston": "^3.2.1",
     "ytdl-core": "^2.0.0"
   },
