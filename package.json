@@ -32,7 +32,7 @@
     "sylphy": "^0.4.5",
     "tenorjs": "^1.0.7",
     "util": "^0.12.2",
-    "winston": "^3.2.1",
+    "winston": "^3.3.3",
     "ytdl-core": "^2.0.0"
   },
   "devDependencies": {
