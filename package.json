@@ -21,7 +21,7 @@
     "dotenv": "^8.2.0",
     "hastebin-gen": "^2.0.5",
     "imdb-api": "^4.0.3",
-    "keyv": "^4.0.0",
+    "keyv": "^4.0.3",
     "node-fetch": "^2.6.0",
     "node-opus": "^0.3.3",
     "omdbapi": "^3.0.0",
