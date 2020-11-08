@@ -20,7 +20,7 @@
     "discord.js-musicbot-addon": "^13.9.1",
     "dotenv": "^8.2.0",
     "hastebin-gen": "^2.0.5",
-    "imdb-api": "^4.0.3",
+    "imdb-api": "^4.4.1",
     "keyv": "^4.0.0",
     "node-fetch": "^2.6.0",
     "node-opus": "^0.3.3",
