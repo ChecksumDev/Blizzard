@@ -15,7 +15,7 @@
     "common-tags": "^1.8.0",
     "dadjokes-wrapper": "^0.1.4",
     "dblapi.js": "^2.4.0",
-    "discord.js": "^12.0.2",
+    "discord.js": "^12.5.1",
     "discord.js-commando": "github:discordjs/Commando",
     "discord.js-musicbot-addon": "^13.9.1",
     "dotenv": "^8.2.0",
